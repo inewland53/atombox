@@ -75,12 +75,20 @@ jobs:
           name: windows-installer
           path: artifacts/windows
 
+      - name: Extract changelog entry
+        run: |
+          VERSION="${{ github.ref_name }}"
+          VERSION="${VERSION#v}"
+          awk "/^## \[$VERSION\]/{flag=1; next} /^## \[/{flag=0} flag" CHANGELOG.md \
+            | sed '/^[[:space:]]*$/d' > release-notes.txt
+          cat release-notes.txt
+
       - name: Create GitHub Release
         run: |
           gh release create "${{ github.ref_name }}" \
             artifacts/mac/*.dmg \
             artifacts/windows/*.exe \
             --title "${{ github.ref_name }}" \
-            --generate-notes
+            --notes-file release-notes.txt
         env:
           GH_TOKEN: ${{ github.token }}

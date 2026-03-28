@@ -11,7 +11,7 @@
   [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-blue?style=flat-square)](https://github.com/inewland53/atombox/releases/latest)
   [![License](https://img.shields.io/github/license/inewland53/atombox?style=flat-square)](LICENSE)
 
-  ![AtomBox](media/main.png)
+  ![AtomBox main window showing the Reactor catalog browser for DaVinci Resolve Fusion](media/main.png)
 
 </div>
 
@@ -19,7 +19,7 @@
 
 ## Why AtomBox?
 
-Managing DaVinci Resolve Fusion plugins manually means hunting GitLab repos, downloading files, and placing them in exactly the right folder — then repeating that for every update. The official Reactor installer works, but it's a script, not a GUI.
+Managing DaVinci Resolve Fusion plugins manually means hunting GitLab repos, downloading files, and placing them in exactly the right folder — then repeating that for every update. The official [Reactor](https://gitlab.com/WeSuckLess/Reactor) installer works, but it's a script, not a GUI.
 
 AtomBox is a native desktop app that gives you a **searchable, filterable interface for the full Reactor catalog**. Browse atoms by category, read descriptions, install or update with one click, and track what's installed — all without leaving your desk. It's the DaVinci Resolve Fusion plugins manager that power users have been missing.
 
@@ -46,7 +46,7 @@ AtomBox is a native desktop app that gives you a **searchable, filterable interf
 
 ## 🚀 Quick Start
 
-1. Launch AtomBox — it auto-detects your DaVinci Resolve Fusion folder
+1. Launch AtomBox — it auto-detects your DaVinci Resolve Fusion folder (internet connection required to fetch the catalog)
 2. Browse the Reactor catalog, search by name/author, or filter by category
 3. Click an atom to view details, then **Install** / **Update** / **Uninstall**
 4. Restart DaVinci Resolve to load newly installed atoms

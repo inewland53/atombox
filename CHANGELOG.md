@@ -19,3 +19,6 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Retry logic for failed downloads (up to 5 attempts)
 - Update detection for installed atoms
 - Settings panel for manual Fusion path configuration
+
+[Unreleased]: https://github.com/inewland53/atombox/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/inewland53/atombox/releases/tag/v1.0.0

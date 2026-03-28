@@ -94,6 +94,7 @@ out/
 # Claude
 .claude
 .superpowers
+docs
 
 # Vite build output
 dist/

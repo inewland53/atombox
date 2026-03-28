@@ -9,7 +9,7 @@
 
   [![Release](https://img.shields.io/github/v/release/inewland53/atombox?style=flat-square)](https://github.com/inewland53/atombox/releases/latest)
   [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-blue?style=flat-square)](https://github.com/inewland53/atombox/releases/latest)
-  [![License](https://img.shields.io/github/license/inewland53/atombox?style=flat-square)](LICENSE)
+  [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
   ![AtomBox main window showing the Reactor catalog browser for DaVinci Resolve Fusion](media/main.png)
 

@@ -11,12 +11,14 @@ permissions:
 jobs:
   build-mac:
     runs-on: macos-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
@@ -29,15 +31,18 @@ jobs:
         with:
           name: mac-installer
           path: out/make/*.dmg
+          if-no-files-found: error
 
   build-windows:
     runs-on: windows-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
@@ -50,13 +55,12 @@ jobs:
         with:
           name: windows-installer
           path: out/make/squirrel.windows/x64/*.exe
+          if-no-files-found: error
 
   release:
     needs: [build-mac, build-windows]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
       - name: Download macOS artifact
         uses: actions/download-artifact@v4
         with:
